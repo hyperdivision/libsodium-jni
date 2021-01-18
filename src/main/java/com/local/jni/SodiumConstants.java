@@ -1,4 +1,4 @@
-package org.libsodium.jni;
+package com.local.jni;
 
 /**
  * Created with IntelliJ IDEA.

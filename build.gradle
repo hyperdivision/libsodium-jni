@@ -1,5 +1,6 @@
 apply plugin: 'maven'
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 import org.gradle.internal.os.OperatingSystem;
@@ -16,6 +17,8 @@ repositories {
 }
 
 android {
+    ndkVersion '19.2.5345600'
+
     compileSdkVersion 28
 
     defaultConfig {
@@ -75,16 +78,16 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:4.0.0'
         classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.20.0"
     }
 }
 
 [
-  [input_arch: 'arm',     output_arch: 'android-armv6',    ndk_platform: 'android-16' ],
-  [input_arch: 'armv7-a', output_arch: 'android-armv7-a',  ndk_platform: 'android-16' ],
-  [input_arch: 'armv8-a', output_arch: 'android-armv8-a',  ndk_platform: 'android-21'],
-  [input_arch: 'x86',     output_arch: 'android-i686',     ndk_platform: 'android-16' ],
+//  [input_arch: 'arm',     output_arch: 'android-armv6',    ndk_platform: 'android-16' ],
+//  [input_arch: 'armv7-a', output_arch: 'android-armv7-a',  ndk_platform: 'android-16' ],
+//  [input_arch: 'armv8-a', output_arch: 'android-armv8-a',  ndk_platform: 'android-21'],
+//  [input_arch: 'x86',     output_arch: 'android-i686',     ndk_platform: 'android-16' ],
   [input_arch: 'x86_64',  output_arch: 'android-westmere', ndk_platform: 'android-21'],
 ].each { opts -> 
 
@@ -148,7 +151,9 @@ model {
           lib library: 'sodium', linkage: 'static'
         }
         binaries.all {
-          if (OperatingSystem.current().isLinux()) {
+            cCompiler.args "-I/Users/chrisdiederichs/Downloads/android-ndk-r19c/sysroot/usr/include"
+            cCompiler.args "-I/Users/chrisdiederichs/Downloads/android-ndk-r19c/sysroot/usr/include/x86_64-linux-android"
+            if (OperatingSystem.current().isLinux()) {
               //flag not on macos clang
               linker.args "-Wl,-Bsymbolic" // to work around error "shared library text segment is not shareable"
           }
@@ -170,7 +175,7 @@ task('generateSWIGsource') {
   doFirst {
     exec {
       workingDir "${projectDir}/jni"
-      commandLine 'swig','-java','-package','org.libsodium.jni','-outdir','../src/main/java/org/libsodium/jni','sodium.i'
+      commandLine 'swig','-java','-package','com.local.jni','-outdir','../src/main/java/org/libsodium/jni','sodium.i'
     }
   }
 }
@@ -195,13 +200,13 @@ uploadArchives {
       }
 
       pom.project {
-        name project.POM_NAME
+        name "lljni"
         packaging 'jar'
-        artifactId project.POM_ARTIFACT_ID
-        groupId project.GROUP
+        artifactId "lljni"
+        groupId "com.local.lljni"
         version project.VERSION_NAME
         // optionally artifactId can be defined here 
-        description project.POM_ARTIFACT_ID
+        description "lljni"
         url project.POM_URL
 
         scm {
@@ -225,6 +230,18 @@ uploadArchives {
           }
         }
       }
+    }
+  }
+}
+
+publishing {
+  repositories {
+    maven {
+      credentials {
+        username 'admin'
+        password 'password'
+      }
+      url "http://baseUrl/artifactory/libs-release-local"
     }
   }
 }
@@ -259,3 +276,31 @@ if (project==rootProject) {
     }
 }
 
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                artifact sourcesJar
+                groupId = 'com.local.lljni'
+                artifactId = 'lib'
+                version = '1.4'
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                artifact sourcesJar
+                groupId = 'com.local.libsodiumjni'
+                artifactId = 'debug'
+                version = '1.4'
+            }
+        }
+    }
+}

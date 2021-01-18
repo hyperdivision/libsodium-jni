@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni;
+package com.local.jni;
 
 
 import java.util.logging.Level;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
-import static org.libsodium.jni.SodiumConstants.RANDOMBYTES_SEEDBYTES;
-import static org.libsodium.jni.NaCl.sodium;
+import static com.local.jni.SodiumConstants.RANDOMBYTES_SEEDBYTES;
+import static com.local.jni.NaCl.sodium;
 
 public class Random {
 

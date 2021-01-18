@@ -1222,6 +1222,7 @@ const char * crypto_pwhash_primitive(void);
 /*
     PW-Hash scryptsalsa208sha256
 */
+/*
 size_t crypto_pwhash_scryptsalsa208sha256_saltbytes(void);
 
 size_t crypto_pwhash_scryptsalsa208sha256_strbytes(void);
@@ -1260,7 +1261,7 @@ int crypto_pwhash_scryptsalsa208sha256_ll(const uint8_t * passwd,
                                           uint8_t * buf,
                                           size_t buflen);
 
-
+*/
 /*
     ScalarMult Curve25519
 */
@@ -1566,7 +1567,7 @@ void crypto_secretstream_xchacha20poly1305_rekey(crypto_secretstream_xchacha20po
 /*
     Box Curve25519XChaCha20Poly1305
 */
-
+/*
 size_t crypto_box_curve25519xchacha20poly1305_seedbytes(void);
 size_t crypto_box_curve25519xchacha20poly1305_publickeybytes(void);
 size_t crypto_box_curve25519xchacha20poly1305_secretkeybytes(void);
@@ -1653,3 +1654,4 @@ int crypto_box_curve25519xchacha20poly1305_seal_open(unsigned char *m,
                                                      unsigned long long clen,
                                                      const unsigned char *pk,
                                                      const unsigned char *sk);
+*/

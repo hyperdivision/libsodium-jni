@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.keys;
+package com.local.jni.keys;
 
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.libsodium.jni.encoders.Encoder.HEX;
-import static org.libsodium.jni.fixture.TestVectors.SIGN_MESSAGE;
-import static org.libsodium.jni.fixture.TestVectors.SIGN_PRIVATE;
-import static org.libsodium.jni.fixture.TestVectors.SIGN_SIGNATURE;
+import static com.local.jni.encoders.Encoder.HEX;
+import static com.local.jni.fixture.TestVectors.SIGN_MESSAGE;
+import static com.local.jni.fixture.TestVectors.SIGN_PRIVATE;
+import static com.local.jni.fixture.TestVectors.SIGN_SIGNATURE;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.keys;
+package com.local.jni.keys;
 
 
-import org.libsodium.jni.encoders.Encoder;
-import org.libsodium.jni.crypto.Util;
+import com.local.jni.encoders.Encoder;
+import com.local.jni.crypto.Util;
 
-import static org.libsodium.jni.SodiumConstants.PUBLICKEY_BYTES;
-import static org.libsodium.jni.SodiumConstants.SIGNATURE_BYTES;
-import static org.libsodium.jni.NaCl.sodium;
+import static com.local.jni.SodiumConstants.PUBLICKEY_BYTES;
+import static com.local.jni.SodiumConstants.SIGNATURE_BYTES;
+import static com.local.jni.NaCl.sodium;
 
 /**
  * @deprecated

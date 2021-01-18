@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.fixture;
+package com.local.jni.fixture;
 
 public class TestVectors {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
 import org.junit.Assert;
 import org.junit.Test;

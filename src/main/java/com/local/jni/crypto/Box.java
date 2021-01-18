@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
-import org.libsodium.jni.encoders.Encoder;
-import org.libsodium.jni.keys.PrivateKey;
-import org.libsodium.jni.keys.PublicKey;
+import com.local.jni.encoders.Encoder;
+import com.local.jni.keys.PrivateKey;
+import com.local.jni.keys.PublicKey;
 
-import static org.libsodium.jni.SodiumConstants.BOXZERO_BYTES;
-import static org.libsodium.jni.SodiumConstants.NONCE_BYTES;
-import static org.libsodium.jni.SodiumConstants.PUBLICKEY_BYTES;
-import static org.libsodium.jni.SodiumConstants.SECRETKEY_BYTES;
-import static org.libsodium.jni.SodiumConstants.ZERO_BYTES;
-import static org.libsodium.jni.NaCl.sodium;
-import static org.libsodium.jni.crypto.Util.checkLength;
-import static org.libsodium.jni.crypto.Util.isValid;
-import static org.libsodium.jni.crypto.Util.prependZeros;
-import static org.libsodium.jni.crypto.Util.removeZeros;
+import static com.local.jni.SodiumConstants.BOXZERO_BYTES;
+import static com.local.jni.SodiumConstants.NONCE_BYTES;
+import static com.local.jni.SodiumConstants.PUBLICKEY_BYTES;
+import static com.local.jni.SodiumConstants.SECRETKEY_BYTES;
+import static com.local.jni.SodiumConstants.ZERO_BYTES;
+import static com.local.jni.NaCl.sodium;
+import static com.local.jni.crypto.Util.checkLength;
+import static com.local.jni.crypto.Util.isValid;
+import static com.local.jni.crypto.Util.prependZeros;
+import static com.local.jni.crypto.Util.removeZeros;
 
 /**
  * Based on Curve25519XSalsa20Poly1305 and Box classes from rbnacl

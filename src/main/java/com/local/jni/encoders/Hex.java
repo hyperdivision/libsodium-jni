@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.encoders;
+package com.local.jni.encoders;
 
 /**
  * Converts hexadecimal Strings.

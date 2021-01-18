@@ -1,7 +1,7 @@
-package org.libsodium.jni.publickey;
+package com.local.jni.publickey;
 
-import org.libsodium.jni.NaCl;
-import org.libsodium.jni.Sodium;
+import com.local.jni.NaCl;
+import com.local.jni.Sodium;
 import org.junit.Assert;
 import org.junit.Test;
 

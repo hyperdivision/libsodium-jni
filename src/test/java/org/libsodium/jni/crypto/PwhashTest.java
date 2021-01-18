@@ -1,7 +1,7 @@
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
-import org.libsodium.jni.Sodium;
-import org.libsodium.jni.NaCl;
+import com.local.jni.Sodium;
+import com.local.jni.NaCl;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;

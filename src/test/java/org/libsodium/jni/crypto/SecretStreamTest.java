@@ -1,12 +1,12 @@
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.fail;
 
-import org.libsodium.jni.Sodium;
-import org.libsodium.jni.encoders.Hex;
+import com.local.jni.Sodium;
+import com.local.jni.encoders.Hex;
 
 public class SecretStreamTest {
     public static final String message1 = "Arbitrary data to encrypt";

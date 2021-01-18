@@ -1,10 +1,10 @@
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-import org.libsodium.jni.NaCl;
-import org.libsodium.jni.Sodium;
+import com.local.jni.NaCl;
+import com.local.jni.Sodium;
 
 public class AeadTest {
 

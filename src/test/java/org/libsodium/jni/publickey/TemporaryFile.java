@@ -1,4 +1,4 @@
-package org.libsodium.jni.publickey;
+package com.local.jni.publickey;
 
 import java.io.File;
 

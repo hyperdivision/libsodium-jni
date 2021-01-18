@@ -1,13 +1,13 @@
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
 import org.junit.Test;
-import org.libsodium.jni.Sodium;
-import org.libsodium.jni.encoders.Hex;
+import com.local.jni.Sodium;
+import com.local.jni.encoders.Hex;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
-import static org.libsodium.jni.SodiumConstants.PUBLICKEY_BYTES;
-import static org.libsodium.jni.SodiumConstants.SESSIONKEYBYTES;
+import static com.local.jni.SodiumConstants.PUBLICKEY_BYTES;
+import static com.local.jni.SodiumConstants.SESSIONKEYBYTES;
 
 public class KeyExchangeTest {
 

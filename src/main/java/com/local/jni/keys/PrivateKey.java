@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.keys;
+package com.local.jni.keys;
 
-import static org.libsodium.jni.SodiumConstants.SECRETKEY_BYTES;
-import static org.libsodium.jni.crypto.Util.checkLength;
-import static org.libsodium.jni.encoders.Encoder.HEX;
+import static com.local.jni.SodiumConstants.SECRETKEY_BYTES;
+import static com.local.jni.crypto.Util.checkLength;
+import static com.local.jni.encoders.Encoder.HEX;
 
 public class PrivateKey {
 

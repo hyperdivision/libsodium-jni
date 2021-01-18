@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.encoders;
+package com.local.jni.encoders;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -22,7 +22,7 @@ rm -f *.so
 
 export PATH=/usr/local/bin:$PATH
 
-swig -I../libsodium/src/libsodium/include -java -package org.libsodium.jni -outdir ../src/main/java/org/libsodium/jni sodium.i
+swig -I../libsodium/src/libsodium/include -java -package com.local.jni -outdir ../src/main/java/org/libsodium/jni sodium.i
 
 
 ./jnilib.sh

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
-import org.libsodium.jni.encoders.Encoder;
+import com.local.jni.encoders.Encoder;
 
-import static org.libsodium.jni.SodiumConstants.BOXZERO_BYTES;
-import static org.libsodium.jni.SodiumConstants.XSALSA20_POLY1305_SECRETBOX_NONCEBYTES;
-import static org.libsodium.jni.SodiumConstants.XSALSA20_POLY1305_SECRETBOX_KEYBYTES;
-import static org.libsodium.jni.SodiumConstants.ZERO_BYTES;
-import static org.libsodium.jni.NaCl.sodium;
-import static org.libsodium.jni.crypto.Util.checkLength;
-import static org.libsodium.jni.crypto.Util.isValid;
-import static org.libsodium.jni.crypto.Util.removeZeros;
+import static com.local.jni.SodiumConstants.BOXZERO_BYTES;
+import static com.local.jni.SodiumConstants.XSALSA20_POLY1305_SECRETBOX_NONCEBYTES;
+import static com.local.jni.SodiumConstants.XSALSA20_POLY1305_SECRETBOX_KEYBYTES;
+import static com.local.jni.SodiumConstants.ZERO_BYTES;
+import static com.local.jni.NaCl.sodium;
+import static com.local.jni.crypto.Util.checkLength;
+import static com.local.jni.crypto.Util.isValid;
+import static com.local.jni.crypto.Util.removeZeros;
 
 /**
  * @deprecated

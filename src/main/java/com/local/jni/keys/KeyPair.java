@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.keys;
+package com.local.jni.keys;
 
-import org.libsodium.jni.crypto.Point;
-import org.libsodium.jni.crypto.Util;
-import org.libsodium.jni.encoders.Encoder;
+import com.local.jni.crypto.Point;
+import com.local.jni.crypto.Util;
+import com.local.jni.encoders.Encoder;
 
-import static org.libsodium.jni.SodiumConstants.PUBLICKEY_BYTES;
-import static org.libsodium.jni.SodiumConstants.SECRETKEY_BYTES;
-import static org.libsodium.jni.NaCl.sodium;
-import static org.libsodium.jni.crypto.Util.checkLength;
-import static org.libsodium.jni.crypto.Util.zeros;
+import static com.local.jni.SodiumConstants.PUBLICKEY_BYTES;
+import static com.local.jni.SodiumConstants.SECRETKEY_BYTES;
+import static com.local.jni.NaCl.sodium;
+import static com.local.jni.crypto.Util.checkLength;
+import static com.local.jni.crypto.Util.zeros;
 
 public class KeyPair {
 

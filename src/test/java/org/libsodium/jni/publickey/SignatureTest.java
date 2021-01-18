@@ -1,10 +1,10 @@
-package org.libsodium.jni.publickey;
+package com.local.jni.publickey;
 
 import com.google.common.io.Files;
 import org.junit.Assert;
 import org.junit.Test;
-import org.libsodium.jni.NaCl;
-import org.libsodium.jni.Sodium;
+import com.local.jni.NaCl;
+import com.local.jni.Sodium;
 
 import java.io.File;
 import java.io.IOException;

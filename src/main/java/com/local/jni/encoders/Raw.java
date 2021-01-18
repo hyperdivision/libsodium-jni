@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.encoders;
+package com.local.jni.encoders;
 
-import java.nio.charset.Charset;
+public class Raw implements Encoder {
 
-public interface Encoder {
+    public byte[] decode(final String data) {
+        return data != null ? data.getBytes(CHARSET) : null;
+    }
 
-    public static final Charset CHARSET = Charset.forName("UTF-8");
-
-    public static final Hex HEX = new Hex();
-    public static final Raw RAW = new Raw();
-
-    public byte[] decode(String data);
-
-    public String encode(final byte[] data);
+    @Override
+    public String encode(byte[] data) {
+        return data != null ? new String(data, CHARSET) : null;
+    }
 }

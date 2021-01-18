@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.libsodium.jni.crypto;
+package com.local.jni.crypto;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.libsodium.jni.fixture.TestVectors;
+import com.local.jni.fixture.TestVectors;
 
 import java.util.Arrays;
 
-import static org.libsodium.jni.encoders.Encoder.HEX;
+import static com.local.jni.encoders.Encoder.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
